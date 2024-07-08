@@ -1,0 +1,77 @@
+:root {
+	--border-size: 8px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.blue-box {
+	background-color: blue;
+	border: solid var(--border-size) black;
+	color: white;
+	text-align: center;
+	padding: 16px;
+}
+
+.red-box {
+	background-color: red;
+	border: solid var(--border-size) black;
+	color: white;
+	text-align: center;
+	padding: 16px;
+}
+
+.div4 {
+	padding: 64px 32px;
+}
+
+.parent567 {
+	display: flex;
+}
+
+.parent567 > * {
+	flex: auto;
+}
+
+.parent8910 {
+	display: flex;
+}
+
+.parent8910 > * {
+	flex: auto;
+	aspect-ratio: 1;
+	vertical-align: middle;
+	display: grid;
+	place-items: center;
+}
+
+@media screen and (min-width: 375px) {
+	.parent23 {
+		display: flex;
+	}
+
+	.parent23 > * {
+		flex: auto;
+	}
+
+	.div4to10 {
+		display: flex;
+	}
+
+	.parent4to7 {
+		flex: 3;
+	}
+
+	.parent8910 {
+		flex: 1;
+		flex-direction: column;
+		row-gap: 16px;
+	}
+
+	.parent8910 > * {
+		aspect-ratio: unset;
+	}
+}
