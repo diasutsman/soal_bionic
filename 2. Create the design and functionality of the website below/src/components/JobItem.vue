@@ -1,3 +1,6 @@
+<script setup>
+const props = defineProps(["onSeeJobClicked"]);
+</script>
 <template>
 	<div class="pwrh-child-job">
 		<div class="pwrh-content-job">
@@ -6,16 +9,15 @@
 			</p>
 
 			<div>
-				<button class="pwrh-content-btn">See Job</button>
+				<button class="pwrh-content-btn" @click="props.onSeeJobClicked">
+					See Job
+				</button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <style scoped>
-.pwrh-child-job {
-}
-
 .pwrh-child-job .pwrh-content-job {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -51,5 +53,6 @@
 	padding-left: 1rem;
 	padding-right: 1rem;
 	white-space: nowrap;
+	cursor: pointer;
 }
 </style>
